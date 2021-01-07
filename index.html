@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillatoasts@1.4.0/vanillatoasts.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>PushNot</title>
+  </head>
+  <body>
+    <h1>Push JS Notifications Experiment</h1>
+    <h3 id="status" class="disconnect">Disconnected From Server</span></h3>
+    <div id="inputs">
+      <input type="text" id="name" placeholder="Enter name">
+      <input type="text" id="topic" placeholder="Enter topic">
+    </div>
+
+    <button id="raise">Raise Hand</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.8/push.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillatoasts@1.4.0/vanillatoasts.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
