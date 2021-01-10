@@ -14,14 +14,16 @@ raiseBtn.addEventListener("click", () => {
   socket.emit("handRaise", data);
 });
 
-socket.on("connected", ({ socketId }) => {
-  status.innerText = `Connected to server with id: ${socketId}`;
+socket.on("connect", () => {
+  console.info(socket.id, "connected ✔️");
+  status.innerText = `Connected to server with id: ${socket.id}`;
   status.className = "connected";
 });
 
-socket.on("disconnected", () => {
-  status.innerText = `Connected to server with id: ${id}`;
-  status.className = "connected";
+socket.on("disconnect", () => {
+  console.info("Socket connection lost ❌");
+  status.innerText = `Connection to server has been lost`;
+  status.className = "disconnect";
 });
 
 socket.on("notify", ({ name, topic }) => {
@@ -35,7 +37,7 @@ socket.on("notify", ({ name, topic }) => {
     positionClass: "topCenter",
     callback: function () {
       console.log("Browser notification cancelled");
-    }, // executed when toast is clicked / optional parameter
+    },
   });
 
   // Desktop Notification
