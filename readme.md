@@ -21,3 +21,7 @@ npm start
 ```
 
 2. Recommend running the `index.html` on the live server in vscode.
+
+##### Screenshot
+
+![screenshot](./images/screenshot.png "screenshot")
